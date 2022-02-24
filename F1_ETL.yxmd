@@ -1,0 +1,1384 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.3">
+  <Nodes>
+    <Node ToolID="86">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="58" y="534" width="623" height="505" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>races</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+          <Caption>races</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="38">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="95" y="583" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\pc\Downloads\archive (24)\lap_times.csv</File>
+              <FormatSpecificOptions>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreErrors>False</IgnoreErrors>
+                <AllowShareWrite>False</AllowShareWrite>
+                <ImportLine>1</ImportLine>
+                <FieldLen>254</FieldLen>
+                <SingleThreadRead>False</SingleThreadRead>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <Delimeter>,</Delimeter>
+                <QuoteRecordBreak>False</QuoteRecordBreak>
+                <CodePage>28591</CodePage>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>lap_times.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="raceId" size="254" source="File: C:\Users\pc\Downloads\archive (24)\lap_times.csv" type="V_String" />
+                <Field name="driverId" size="254" source="File: C:\Users\pc\Downloads\archive (24)\lap_times.csv" type="V_String" />
+                <Field name="lap" size="254" source="File: C:\Users\pc\Downloads\archive (24)\lap_times.csv" type="V_String" />
+                <Field name="position" size="254" source="File: C:\Users\pc\Downloads\archive (24)\lap_times.csv" type="V_String" />
+                <Field name="time" size="254" source="File: C:\Users\pc\Downloads\archive (24)\lap_times.csv" type="V_String" />
+                <Field name="milliseconds" size="254" source="File: C:\Users\pc\Downloads\archive (24)\lap_times.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="39">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="204" y="584" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="raceId" selected="True" rename="race_id" type="Int32" size="4" />
+                <SelectField field="driverId" selected="True" rename="driver_id" type="Int32" size="4" />
+                <SelectField field="lap" selected="True" type="Int16" size="2" />
+                <SelectField field="position" selected="True" type="Int16" size="2" />
+                <SelectField field="time" selected="False" />
+                <SelectField field="milliseconds" selected="True" type="Double" size="8" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="87">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="300" y="584" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="23">odbc:DSN=f1_data;UID=root;PWD=__EncPwd1__|||lap_times</File>
+              <Passwords>42D734FCC1D913162A0F394BF2F4760FD03D8809E47B26EDB</Passwords>
+              <FormatSpecificOptions>
+                <SpatialObjSize>8000</SpatialObjSize>
+                <TransactionSize>10000</TransactionSize>
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <PostSQL />
+                <TableStyle>Quoted</TableStyle>
+                <PreSQL />
+                <TransactionMessages>False</TransactionMessages>
+                <OutputOption>Create</OutputOption>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>DSN=f1_data
+Query=lap_times</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="41">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="96" y="656" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\pc\Downloads\archive (24)\pit_stops.csv</File>
+              <FormatSpecificOptions>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreErrors>False</IgnoreErrors>
+                <AllowShareWrite>False</AllowShareWrite>
+                <ImportLine>1</ImportLine>
+                <FieldLen>254</FieldLen>
+                <SingleThreadRead>False</SingleThreadRead>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <Delimeter>,</Delimeter>
+                <QuoteRecordBreak>False</QuoteRecordBreak>
+                <CodePage>28591</CodePage>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>pit_stops.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="raceId" size="254" source="File: C:\Users\pc\Downloads\archive (24)\pit_stops.csv" type="V_String" />
+                <Field name="driverId" size="254" source="File: C:\Users\pc\Downloads\archive (24)\pit_stops.csv" type="V_String" />
+                <Field name="stop" size="254" source="File: C:\Users\pc\Downloads\archive (24)\pit_stops.csv" type="V_String" />
+                <Field name="lap" size="254" source="File: C:\Users\pc\Downloads\archive (24)\pit_stops.csv" type="V_String" />
+                <Field name="time" size="254" source="File: C:\Users\pc\Downloads\archive (24)\pit_stops.csv" type="V_String" />
+                <Field name="duration" size="254" source="File: C:\Users\pc\Downloads\archive (24)\pit_stops.csv" type="V_String" />
+                <Field name="milliseconds" size="254" source="File: C:\Users\pc\Downloads\archive (24)\pit_stops.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="42">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="216" y="656" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="raceId" selected="True" rename="race_id" type="Int32" size="4" />
+                <SelectField field="driverId" selected="True" rename="driver_id" type="Int32" size="4" />
+                <SelectField field="stop" selected="True" type="Int16" size="2" />
+                <SelectField field="lap" selected="True" type="Int16" size="2" />
+                <SelectField field="time" selected="False" type="Time" size="8" />
+                <SelectField field="duration" selected="False" />
+                <SelectField field="milliseconds" selected="True" type="Double" size="8" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="88">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="300" y="656" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="23">odbc:DSN=f1_data;UID=root;PWD=__EncPwd1__|||pit_stops</File>
+              <Passwords>42D734FCC1D913162A0F394BF2F4760FD03D8809E47B26EDB</Passwords>
+              <FormatSpecificOptions>
+                <SpatialObjSize>8000</SpatialObjSize>
+                <TransactionSize>10000</TransactionSize>
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <PostSQL />
+                <TableStyle>Quoted</TableStyle>
+                <PreSQL />
+                <TransactionMessages>False</TransactionMessages>
+                <OutputOption>Create</OutputOption>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>DSN=f1_data
+Query=pit_stops</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="48">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="83" y="848" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\pc\Downloads\archive (24)\results.csv</File>
+              <FormatSpecificOptions>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreErrors>False</IgnoreErrors>
+                <AllowShareWrite>False</AllowShareWrite>
+                <ImportLine>1</ImportLine>
+                <FieldLen>254</FieldLen>
+                <SingleThreadRead>False</SingleThreadRead>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <Delimeter>,</Delimeter>
+                <QuoteRecordBreak>False</QuoteRecordBreak>
+                <CodePage>28591</CodePage>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>results.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="resultId" size="254" source="File: C:\Users\pc\Downloads\archive (24)\results.csv" type="V_String" />
+                <Field name="raceId" size="254" source="File: C:\Users\pc\Downloads\archive (24)\results.csv" type="V_String" />
+                <Field name="driverId" size="254" source="File: C:\Users\pc\Downloads\archive (24)\results.csv" type="V_String" />
+                <Field name="constructorId" size="254" source="File: C:\Users\pc\Downloads\archive (24)\results.csv" type="V_String" />
+                <Field name="number" size="254" source="File: C:\Users\pc\Downloads\archive (24)\results.csv" type="V_String" />
+                <Field name="grid" size="254" source="File: C:\Users\pc\Downloads\archive (24)\results.csv" type="V_String" />
+                <Field name="position" size="254" source="File: C:\Users\pc\Downloads\archive (24)\results.csv" type="V_String" />
+                <Field name="positionText" size="254" source="File: C:\Users\pc\Downloads\archive (24)\results.csv" type="V_String" />
+                <Field name="positionOrder" size="254" source="File: C:\Users\pc\Downloads\archive (24)\results.csv" type="V_String" />
+                <Field name="points" size="254" source="File: C:\Users\pc\Downloads\archive (24)\results.csv" type="V_String" />
+                <Field name="laps" size="254" source="File: C:\Users\pc\Downloads\archive (24)\results.csv" type="V_String" />
+                <Field name="time" size="254" source="File: C:\Users\pc\Downloads\archive (24)\results.csv" type="V_String" />
+                <Field name="milliseconds" size="254" source="File: C:\Users\pc\Downloads\archive (24)\results.csv" type="V_String" />
+                <Field name="fastestLap" size="254" source="File: C:\Users\pc\Downloads\archive (24)\results.csv" type="V_String" />
+                <Field name="rank" size="254" source="File: C:\Users\pc\Downloads\archive (24)\results.csv" type="V_String" />
+                <Field name="fastestLapTime" size="254" source="File: C:\Users\pc\Downloads\archive (24)\results.csv" type="V_String" />
+                <Field name="fastestLapSpeed" size="254" source="File: C:\Users\pc\Downloads\archive (24)\results.csv" type="V_String" />
+                <Field name="statusId" size="254" source="File: C:\Users\pc\Downloads\archive (24)\results.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="53">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="83" y="932" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\pc\Downloads\archive (24)\status.csv</File>
+              <FormatSpecificOptions>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreErrors>False</IgnoreErrors>
+                <AllowShareWrite>False</AllowShareWrite>
+                <ImportLine>1</ImportLine>
+                <FieldLen>254</FieldLen>
+                <SingleThreadRead>False</SingleThreadRead>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <Delimeter>,</Delimeter>
+                <QuoteRecordBreak>False</QuoteRecordBreak>
+                <CodePage>28591</CodePage>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>status.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="statusId" size="254" source="File: C:\Users\pc\Downloads\archive (24)\status.csv" type="V_String" />
+                <Field name="status" size="254" source="File: C:\Users\pc\Downloads\archive (24)\status.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="54">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="192" y="848" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="statusId" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="statusId" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_statusId" selected="True" rename="Right_statusId" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="55">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="468" y="848" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="resultId" selected="True" rename="result_id" type="Int32" size="4" />
+                <SelectField field="raceId" selected="True" rename="race_id" type="Int32" size="4" />
+                <SelectField field="driverId" selected="True" rename="driver_id" type="Int32" size="4" />
+                <SelectField field="constructorId" selected="True" rename="constructor_id" type="Int32" size="4" />
+                <SelectField field="statusId" selected="True" rename="status_id" type="Int32" size="4" />
+                <SelectField field="number" selected="True" type="Int32" size="4" />
+                <SelectField field="grid" selected="True" type="Int32" size="4" />
+                <SelectField field="position" selected="True" type="Int32" size="4" />
+                <SelectField field="positionText" selected="False" />
+                <SelectField field="positionOrder" selected="True" rename="position_order" type="Int32" size="4" />
+                <SelectField field="points" selected="True" type="Double" size="8" />
+                <SelectField field="laps" selected="True" type="Int32" size="4" />
+                <SelectField field="time" selected="False" />
+                <SelectField field="milliseconds" selected="True" rename="laptime_milsec" type="Double" size="8" />
+                <SelectField field="fastestLap" selected="True" rename="fastest_lap" type="Double" size="8" />
+                <SelectField field="rank" selected="True" type="Int32" size="4" />
+                <SelectField field="toMilliseconds" selected="True" rename="fastest_lap_time" />
+                <SelectField field="fastestLapTime" selected="False" rename="fastest_laptime" />
+                <SelectField field="fastestLapSpeed" selected="True" rename="fastest_lap_speed" type="Double" size="8" />
+                <SelectField field="Right_statusId" selected="False" />
+                <SelectField field="status" selected="True" />
+                <SelectField field="Minutes" selected="False" />
+                <SelectField field="Seconds" selected="False" />
+                <SelectField field="ms" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="90">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
+            <Position x="275" y="848" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldType>Text</FieldType>
+              <Fields orderChanged="False">
+                <Field name="resultId" />
+                <Field name="raceId" />
+                <Field name="driverId" />
+                <Field name="constructorId" />
+                <Field name="number" />
+                <Field name="grid" />
+                <Field name="position" />
+                <Field name="positionText" />
+                <Field name="positionOrder" />
+                <Field name="points" />
+                <Field name="laps" />
+                <Field name="time" />
+                <Field name="milliseconds" />
+                <Field name="fastestLap" />
+                <Field name="rank" />
+                <Field name="fastestLapTime" />
+                <Field name="fastestLapSpeed" />
+                <Field name="statusId" />
+                <Field name="Right_statusId" />
+                <Field name="status" />
+                <Field name="*Unknown" />
+              </Fields>
+              <CopyOutput value="False" />
+              <Expression>if Contains([_CurrentField_], '\N') then 0 else [_CurrentField_]
+endif</Expression>
+              <ChangeFieldType value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>if Contains([_CurrentField_], '\N') then 0 else [_CurrentFiel...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiFieldFormula" />
+        </Node>
+        <Node ToolID="91">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="372" y="848" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="REGEX_Replace([Time], '(.+)\:(.+)\.(.+)', '$1')&#xA;" field="Minutes" size="1073741823" type="V_WString" />
+                <FormulaField expression="REGEX_Replace([Time], '(.+)\:(.+)\.(.+)', '$2')" field="Seconds" size="1073741823" type="V_WString" />
+                <FormulaField expression="REGEX_Replace([Time], '(.+)\:(.+)\.(.+)', '$3')" field="ms" size="1073741823" type="V_WString" />
+                <FormulaField expression="ToNumber([Minutes]) * 60000 + ToNumber([Seconds]) * 1000 + ToNumber([ms])" field="toMilliseconds" size="8" type="Double" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Minutes = REGEX_Replace([Time], '(.+)\:(.+)\.(.+)', '$1')
+
+Seconds = REGEX_Repla...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="93">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="552" y="848" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="23">odbc:DSN=f1_data;UID=root;PWD=__EncPwd1__|||race_results</File>
+              <Passwords>42D734FCC1D913162A0F394BF2F4760FD03D8809E47B26EDB</Passwords>
+              <FormatSpecificOptions>
+                <SpatialObjSize>8000</SpatialObjSize>
+                <TransactionSize>10000</TransactionSize>
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <PostSQL />
+                <TableStyle>Quoted</TableStyle>
+                <PreSQL />
+                <TransactionMessages>False</TransactionMessages>
+                <OutputOption>Create</OutputOption>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>DSN=f1_data
+Query=race_results</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="46">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="83" y="764" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\pc\Downloads\archive (24)\races.csv</File>
+              <FormatSpecificOptions>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreErrors>False</IgnoreErrors>
+                <AllowShareWrite>False</AllowShareWrite>
+                <ImportLine>1</ImportLine>
+                <FieldLen>254</FieldLen>
+                <SingleThreadRead>False</SingleThreadRead>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <Delimeter>,</Delimeter>
+                <QuoteRecordBreak>False</QuoteRecordBreak>
+                <CodePage>28591</CodePage>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>races.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="raceId" size="254" source="File: C:\Users\pc\Downloads\archive (24)\races.csv" type="V_String" />
+                <Field name="year" size="254" source="File: C:\Users\pc\Downloads\archive (24)\races.csv" type="V_String" />
+                <Field name="round" size="254" source="File: C:\Users\pc\Downloads\archive (24)\races.csv" type="V_String" />
+                <Field name="circuitId" size="254" source="File: C:\Users\pc\Downloads\archive (24)\races.csv" type="V_String" />
+                <Field name="name" size="254" source="File: C:\Users\pc\Downloads\archive (24)\races.csv" type="V_String" />
+                <Field name="date" size="254" source="File: C:\Users\pc\Downloads\archive (24)\races.csv" type="V_String" />
+                <Field name="time" size="254" source="File: C:\Users\pc\Downloads\archive (24)\races.csv" type="V_String" />
+                <Field name="url" size="254" source="File: C:\Users\pc\Downloads\archive (24)\races.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="47">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="192" y="764" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="raceId" selected="True" rename="race_id" type="Int32" size="4" />
+                <SelectField field="circuitId" selected="True" rename="circuit_id" type="Int32" size="4" />
+                <SelectField field="date" selected="True" type="Date" size="10" />
+                <SelectField field="year" selected="True" type="Int32" size="4" />
+                <SelectField field="round" selected="True" />
+                <SelectField field="name" selected="True" />
+                <SelectField field="time" selected="False" type="Time" size="8" />
+                <SelectField field="url" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="89">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="384" y="764" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="23">odbc:DSN=f1_data;UID=root;PWD=__EncPwd1__|||races</File>
+              <Passwords>42D734FCC1D913162A0F394BF2F4760FD03D8809E47B26EDB</Passwords>
+              <FormatSpecificOptions>
+                <SpatialObjSize>8000</SpatialObjSize>
+                <TransactionSize>10000</TransactionSize>
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <PostSQL />
+                <TableStyle>Quoted</TableStyle>
+                <PreSQL />
+                <TransactionMessages>False</TransactionMessages>
+                <OutputOption>Overwrite</OutputOption>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>DSN=f1_data
+Query=races</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="95">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+            <Position x="288" y="764" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UniqueFields>
+                <Field field="race_id" />
+              </UniqueFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="35">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="491" y="53" width="377" height="371" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>driver</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+          <Caption>driver</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="30">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="516" y="102" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\pc\Downloads\archive (24)\drivers.csv</File>
+              <FormatSpecificOptions>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreErrors>False</IgnoreErrors>
+                <AllowShareWrite>False</AllowShareWrite>
+                <ImportLine>1</ImportLine>
+                <FieldLen>254</FieldLen>
+                <SingleThreadRead>False</SingleThreadRead>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <Delimeter>,</Delimeter>
+                <QuoteRecordBreak>False</QuoteRecordBreak>
+                <CodePage>28591</CodePage>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>drivers.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="driverId" size="254" source="File: C:\Users\pc\Downloads\archive (24)\drivers.csv" type="V_String" />
+                <Field name="driverRef" size="254" source="File: C:\Users\pc\Downloads\archive (24)\drivers.csv" type="V_String" />
+                <Field name="number" size="254" source="File: C:\Users\pc\Downloads\archive (24)\drivers.csv" type="V_String" />
+                <Field name="code" size="254" source="File: C:\Users\pc\Downloads\archive (24)\drivers.csv" type="V_String" />
+                <Field name="forename" size="254" source="File: C:\Users\pc\Downloads\archive (24)\drivers.csv" type="V_String" />
+                <Field name="surname" size="254" source="File: C:\Users\pc\Downloads\archive (24)\drivers.csv" type="V_String" />
+                <Field name="dob" size="254" source="File: C:\Users\pc\Downloads\archive (24)\drivers.csv" type="V_String" />
+                <Field name="nationality" size="254" source="File: C:\Users\pc\Downloads\archive (24)\drivers.csv" type="V_String" />
+                <Field name="url" size="254" source="File: C:\Users\pc\Downloads\archive (24)\drivers.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="31">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="528" y="224" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\pc\Downloads\archive (24)\driver_standings.csv</File>
+              <FormatSpecificOptions>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreErrors>False</IgnoreErrors>
+                <AllowShareWrite>False</AllowShareWrite>
+                <ImportLine>1</ImportLine>
+                <FieldLen>254</FieldLen>
+                <SingleThreadRead>False</SingleThreadRead>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <Delimeter>,</Delimeter>
+                <QuoteRecordBreak>False</QuoteRecordBreak>
+                <CodePage>28591</CodePage>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>driver_standings.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="driverStandingsId" size="254" source="File: C:\Users\pc\Downloads\archive (24)\driver_standings.csv" type="V_String" />
+                <Field name="raceId" size="254" source="File: C:\Users\pc\Downloads\archive (24)\driver_standings.csv" type="V_String" />
+                <Field name="driverId" size="254" source="File: C:\Users\pc\Downloads\archive (24)\driver_standings.csv" type="V_String" />
+                <Field name="points" size="254" source="File: C:\Users\pc\Downloads\archive (24)\driver_standings.csv" type="V_String" />
+                <Field name="position" size="254" source="File: C:\Users\pc\Downloads\archive (24)\driver_standings.csv" type="V_String" />
+                <Field name="positionText" size="254" source="File: C:\Users\pc\Downloads\archive (24)\driver_standings.csv" type="V_String" />
+                <Field name="wins" size="254" source="File: C:\Users\pc\Downloads\archive (24)\driver_standings.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="36">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="684" y="104" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="driverId" selected="True" rename="driver_id" type="Int32" size="4" />
+                <SelectField field="driverName" selected="True" rename="driver_name" />
+                <SelectField field="driverRef" selected="False" />
+                <SelectField field="number" selected="False" />
+                <SelectField field="code" selected="False" />
+                <SelectField field="forename" selected="False" />
+                <SelectField field="surname" selected="False" />
+                <SelectField field="dob" selected="True" type="Date" size="10" />
+                <SelectField field="nationality" selected="True" />
+                <SelectField field="url" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="37">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="624" y="224" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="driverStandingsId" selected="True" rename="driver_standings_id" type="Int32" size="4" />
+                <SelectField field="raceId" selected="True" rename="race_id" type="Int32" size="4" />
+                <SelectField field="driverId" selected="True" rename="driver_id" type="Int32" size="4" />
+                <SelectField field="points" selected="True" type="Double" size="8" />
+                <SelectField field="position" selected="True" type="Double" size="8" />
+                <SelectField field="positionText" selected="False" />
+                <SelectField field="wins" selected="True" type="Int32" size="4" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="40">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="588" y="103" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[forename] + ' ' + [surname]" field="driverName" size="1073741823" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[driverName = [forename] + ' ' + [surname]
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="84">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="756" y="104" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="23">odbc:DSN=f1_data;UID=root;PWD=__EncPwd1__|||drivers</File>
+              <Passwords>42D734FCC1D913162A0F394BF2F4760FD03D8809E47B26EDB</Passwords>
+              <FormatSpecificOptions>
+                <SpatialObjSize>8000</SpatialObjSize>
+                <TransactionSize>10000</TransactionSize>
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <PostSQL />
+                <TableStyle>Quoted</TableStyle>
+                <PreSQL />
+                <TransactionMessages>False</TransactionMessages>
+                <OutputOption>Create</OutputOption>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>DSN=f1_data
+Query=drivers</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="85">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="708" y="224" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="23">odbc:DSN=f1_data;UID=root;PWD=__EncPwd1__|||driver_standings</File>
+              <Passwords>42D734FCC1D913162A0F394BF2F4760FD03D8809E47B26EDB</Passwords>
+              <FormatSpecificOptions>
+                <SpatialObjSize>8000</SpatialObjSize>
+                <TransactionSize>10000</TransactionSize>
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <PostSQL />
+                <TableStyle>Quoted</TableStyle>
+                <PreSQL />
+                <TransactionMessages>False</TransactionMessages>
+                <OutputOption>Create</OutputOption>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>DSN=f1_data
+Query=driver_standings</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="98">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="642" y="294" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="23">odbc:DSN=f1_data;UID=root;PWD=__EncPwd1__|||constructors</File>
+              <Passwords>42D734FCC1D913162A0F394BF2F4760FD03D8809E47B26EDB</Passwords>
+              <FormatSpecificOptions>
+                <SpatialObjSize>8000</SpatialObjSize>
+                <TransactionSize>10000</TransactionSize>
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <PostSQL />
+                <TableStyle>Quoted</TableStyle>
+                <PreSQL />
+                <TransactionMessages>False</TransactionMessages>
+                <OutputOption>Overwrite</OutputOption>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>DSN=f1_data
+Query=constructors</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="70" y="271" width="290" height="281" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Constructor</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+          <Caption>Constructor</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Caption>Constructor</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Caption>Constructor</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="14">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="96" y="367" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\pc\Downloads\archive (24)\constructor_standings.csv</File>
+              <FormatSpecificOptions>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreErrors>False</IgnoreErrors>
+                <AllowShareWrite>False</AllowShareWrite>
+                <ImportLine>1</ImportLine>
+                <FieldLen>254</FieldLen>
+                <SingleThreadRead>False</SingleThreadRead>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <Delimeter>,</Delimeter>
+                <QuoteRecordBreak>False</QuoteRecordBreak>
+                <CodePage>28591</CodePage>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>constructor_standings.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="constructorStandingsId" size="254" source="File: C:\Users\pc\Downloads\archive (24)\constructor_standings.csv" type="V_String" />
+                <Field name="raceId" size="254" source="File: C:\Users\pc\Downloads\archive (24)\constructor_standings.csv" type="V_String" />
+                <Field name="constructorId" size="254" source="File: C:\Users\pc\Downloads\archive (24)\constructor_standings.csv" type="V_String" />
+                <Field name="points" size="254" source="File: C:\Users\pc\Downloads\archive (24)\constructor_standings.csv" type="V_String" />
+                <Field name="position" size="254" source="File: C:\Users\pc\Downloads\archive (24)\constructor_standings.csv" type="V_String" />
+                <Field name="positionText" size="254" source="File: C:\Users\pc\Downloads\archive (24)\constructor_standings.csv" type="V_String" />
+                <Field name="wins" size="254" source="File: C:\Users\pc\Downloads\archive (24)\constructor_standings.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="15">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="95" y="452" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\pc\Downloads\archive (24)\constructors.csv</File>
+              <FormatSpecificOptions>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreErrors>False</IgnoreErrors>
+                <AllowShareWrite>False</AllowShareWrite>
+                <ImportLine>1</ImportLine>
+                <FieldLen>254</FieldLen>
+                <SingleThreadRead>False</SingleThreadRead>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <Delimeter>,</Delimeter>
+                <QuoteRecordBreak>False</QuoteRecordBreak>
+                <CodePage>28591</CodePage>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>constructors.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="constructorId" size="254" source="File: C:\Users\pc\Downloads\archive (24)\constructors.csv" type="V_String" />
+                <Field name="constructorRef" size="254" source="File: C:\Users\pc\Downloads\archive (24)\constructors.csv" type="V_String" />
+                <Field name="name" size="254" source="File: C:\Users\pc\Downloads\archive (24)\constructors.csv" type="V_String" />
+                <Field name="nationality" size="254" source="File: C:\Users\pc\Downloads\archive (24)\constructors.csv" type="V_String" />
+                <Field name="url" size="254" source="File: C:\Users\pc\Downloads\archive (24)\constructors.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="75">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="192" y="416" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="constructorId" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="constructorId" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="True" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Left_constructorId" selected="True" input="Left_" />
+                    <SelectField field="Left_constructorStandingsId" selected="True" input="Left_" />
+                    <SelectField field="Left_raceId" selected="True" input="Left_" />
+                    <SelectField field="Right_name" selected="True" input="Right_" />
+                    <SelectField field="Right_nationality" selected="True" input="Right_" />
+                    <SelectField field="Right_constructorId" selected="False" rename="Right_constructorId" input="Right_" />
+                    <SelectField field="Left_points" selected="True" input="Left_" />
+                    <SelectField field="Left_position" selected="True" input="Left_" />
+                    <SelectField field="Left_wins" selected="True" input="Left_" />
+                    <SelectField field="Right_raceId" selected="False" rename="Right_raceId" input="Right_" />
+                    <SelectField field="Right_points" selected="False" rename="Right_points" input="Right_" />
+                    <SelectField field="Right_constructorRef" selected="False" input="Right_" />
+                    <SelectField field="Right_url" selected="False" input="Right_" />
+                    <SelectField field="Left_positionText" selected="False" input="Left_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="96">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="96" y="320" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\pc\Downloads\archive (24)\constructor_results.csv</File>
+              <FormatSpecificOptions>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreErrors>False</IgnoreErrors>
+                <AllowShareWrite>False</AllowShareWrite>
+                <ImportLine>1</ImportLine>
+                <FieldLen>254</FieldLen>
+                <SingleThreadRead>False</SingleThreadRead>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <Delimeter>,</Delimeter>
+                <QuoteRecordBreak>False</QuoteRecordBreak>
+                <CodePage>28591</CodePage>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>constructor_results.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="constructorResultsId" size="254" source="File: C:\Users\pc\Downloads\archive (24)\constructor_results.csv" type="V_String" />
+                <Field name="raceId" size="254" source="File: C:\Users\pc\Downloads\archive (24)\constructor_results.csv" type="V_String" />
+                <Field name="constructorId" size="254" source="File: C:\Users\pc\Downloads\archive (24)\constructor_results.csv" type="V_String" />
+                <Field name="points" size="254" source="File: C:\Users\pc\Downloads\archive (24)\constructor_results.csv" type="V_String" />
+                <Field name="status" size="254" source="File: C:\Users\pc\Downloads\archive (24)\constructor_results.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="97">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="276" y="332" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="constructorId" />
+                <Field field="raceId" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="constructorId" />
+                <Field field="raceId" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="True" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Left_constructorResultsId" selected="True" rename="constructor_results_id" input="Left_" type="Int32" size="4" />
+                    <SelectField field="Left_raceId" selected="True" rename="race_id" input="Left_" type="Int32" size="4" />
+                    <SelectField field="Left_constructorId" selected="True" rename="constructor_id" input="Left_" type="Int32" size="4" />
+                    <SelectField field="Right_constructorStandingsId" selected="True" rename="constructor_standinfs_id" input="Right_" type="Int32" size="4" />
+                    <SelectField field="Left_points" selected="True" input="Left_" type="Double" size="8" />
+                    <SelectField field="Right_name" selected="True" input="Right_" />
+                    <SelectField field="Right_nationality" selected="True" input="Right_" />
+                    <SelectField field="Right_constructorId" selected="False" rename="Right_constructorId" input="Right_" type="Int32" size="4" />
+                    <SelectField field="Left_status" selected="False" input="Left_" />
+                    <SelectField field="Right_raceId" selected="False" rename="Right_raceId" input="Right_" />
+                    <SelectField field="Right_points" selected="False" rename="Right_points" input="Right_" type="Int32" size="4" />
+                    <SelectField field="Right_position" selected="True" input="Right_" type="Int32" size="4" />
+                    <SelectField field="Right_wins" selected="True" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="54" y="55" width="420" height="165" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Circuits</Caption>
+          <Style TextColor="#314c4a" FillColor="#c0c0c0" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+          <Caption>Circuits</Caption>
+          <Style TextColor="#314c4a" FillColor="#c0c0c0" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="10">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="168" y="104" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="circuitId" selected="True" rename="circuit_id" type="Int16" size="2" />
+                <SelectField field="circuitRef" selected="False" rename="circuit_ref" />
+                <SelectField field="name" selected="True" rename="circuit_name" />
+                <SelectField field="lat" selected="True" rename="latitude" type="Double" size="8" />
+                <SelectField field="lng" selected="True" rename="longitude" type="Double" size="8" />
+                <SelectField field="alt" selected="False" />
+                <SelectField field="url" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="8">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="79" y="104" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\pc\Downloads\archive (24)\circuits.csv</File>
+              <FormatSpecificOptions>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreErrors>False</IgnoreErrors>
+                <AllowShareWrite>False</AllowShareWrite>
+                <ImportLine>1</ImportLine>
+                <FieldLen>254</FieldLen>
+                <SingleThreadRead>False</SingleThreadRead>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <Delimeter>,</Delimeter>
+                <QuoteRecordBreak>False</QuoteRecordBreak>
+                <CodePage>28591</CodePage>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>circuits.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="circuitId" size="254" source="File: C:\Users\pc\Downloads\archive (24)\circuits.csv" type="V_String" />
+                <Field name="circuitRef" size="254" source="File: C:\Users\pc\Downloads\archive (24)\circuits.csv" type="V_String" />
+                <Field name="name" size="254" source="File: C:\Users\pc\Downloads\archive (24)\circuits.csv" type="V_String" />
+                <Field name="location" size="254" source="File: C:\Users\pc\Downloads\archive (24)\circuits.csv" type="V_String" />
+                <Field name="country" size="254" source="File: C:\Users\pc\Downloads\archive (24)\circuits.csv" type="V_String" />
+                <Field name="lat" size="254" source="File: C:\Users\pc\Downloads\archive (24)\circuits.csv" type="V_String" />
+                <Field name="lng" size="254" source="File: C:\Users\pc\Downloads\archive (24)\circuits.csv" type="V_String" />
+                <Field name="alt" size="254" source="File: C:\Users\pc\Downloads\archive (24)\circuits.csv" type="V_String" />
+                <Field name="url" size="254" source="File: C:\Users\pc\Downloads\archive (24)\circuits.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="80">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="360" y="104" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="23">odbc:DSN=f1_data;UID=root ;PWD=__EncPwd1__|||circuits</File>
+              <Passwords>42D734FCC1D913162A0F394BF2F4760FD03D8809E47B26EDB</Passwords>
+              <FormatSpecificOptions>
+                <SpatialObjSize>8000</SpatialObjSize>
+                <TransactionSize>10000</TransactionSize>
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <PostSQL />
+                <TableStyle>Quoted</TableStyle>
+                <AppendMap>
+                  <AppendMapping mode="ByName" />
+                </AppendMap>
+                <PreSQL />
+                <TransactionMessages>False</TransactionMessages>
+                <OutputOption>Overwrite</OutputOption>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>DSN=f1_data
+Query=circuits</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="94">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+            <Position x="264" y="104" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UniqueFields>
+                <Field field="circuit_id" />
+              </UniqueFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="38" Connection="Output" />
+      <Destination ToolID="39" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="39" Connection="Output" />
+      <Destination ToolID="87" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="41" Connection="Output" />
+      <Destination ToolID="42" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="42" Connection="Output" />
+      <Destination ToolID="88" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="48" Connection="Output" />
+      <Destination ToolID="54" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="53" Connection="Output" />
+      <Destination ToolID="54" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="54" Connection="Join" />
+      <Destination ToolID="90" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="55" Connection="Output" />
+      <Destination ToolID="93" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="90" Connection="Output" />
+      <Destination ToolID="91" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="91" Connection="Output" />
+      <Destination ToolID="55" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="46" Connection="Output" />
+      <Destination ToolID="47" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="47" Connection="Output" />
+      <Destination ToolID="95" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="95" Connection="Unique" />
+      <Destination ToolID="89" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="30" Connection="Output" />
+      <Destination ToolID="40" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="31" Connection="Output" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="31" Connection="Output" />
+      <Destination ToolID="98" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="36" Connection="Output" />
+      <Destination ToolID="84" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="37" Connection="Output" />
+      <Destination ToolID="85" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="40" Connection="Output" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="75" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="75" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="75" Connection="Join" />
+      <Destination ToolID="97" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="96" Connection="Output" />
+      <Destination ToolID="97" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="94" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="94" Connection="Unique" />
+      <Destination ToolID="80" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>F1_ETL</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="fbf553aa-e9c6-4acc-9865-7609929a0bf5" />
+      <Telemetry>
+        <PreviousWorkflowId value="0d2ec18e-f9e7-434e-98a6-230b6a0ff733" />
+        <OriginWorkflowId value="0d2ec18e-f9e7-434e-98a6-230b6a0ff733" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
